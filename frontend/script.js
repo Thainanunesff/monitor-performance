@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
   testarAPI();
 });
 
-// Testar chamada à API (padrão)
+// Testar chamada à API padrão 
 async function testarAPI() {
   const inicio = performance.now();
   try {
@@ -79,7 +79,7 @@ function desenharGrafico() {
   });
 }
 
-// Botão para recarregar testes
+// Botão para recarregar teste
 document.getElementById('reexecutar').addEventListener('click', () => {
   document.getElementById('alertas').innerHTML = '';
   relatorio.alertas = [];
@@ -88,7 +88,7 @@ document.getElementById('reexecutar').addEventListener('click', () => {
   window.location.reload();
 });
 
-// Botão para baixar JSON
+// Botão para o JSON
 document.getElementById('baixar-relatorio').addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(relatorio, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -98,7 +98,7 @@ document.getElementById('baixar-relatorio').addEventListener('click', () => {
   a.click();
 });
 
-// NOVO: Botão para testar qualquer URL usando o servidor proxy
+// Testar URL 
 document.getElementById('btn-testar-url').addEventListener('click', async () => {
   const url = document.getElementById('url-input').value.trim();
   const resultado = document.getElementById('resultado-url');
