@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monitor de Performance Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <span><h1>📊 Monitor De Performance Web</h1></span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2><span class="icone">⏱️</span> Tempo de carregamento</h2>
+      <p id="tempo-carregamento">Calculando...</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icone">🌐</span> Resposta da API</h2>
+      <p id="api-status">Testando...</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icone">⚠️</span> Alertas</h2>
+      <ul id="alertas"></ul>
+    </div>
+
+    <div class="card">
+      <h2>🔍 Testar URL</h2>
+      <input
+        type="text"
+        id="url-input"
+        placeholder="Digite a URL (ex: https://www.google.com)"
+      />
+      <button id="btn-testar-url">Testar</button>
+      <p id="resultado-url"></p>
+    </div>
+
+    <div class="botoes">
+      <button id="reexecutar">🔁 Recarregar Testes</button>
+      <button id="baixar-relatorio">⬇️ Baixar Relatório JSON</button>
+    </div>
+
+    <div class="card">
+      <h2>📊 Gráfico de Desempenho</h2>
+      <canvas id="graficoPerformance" height="120"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
